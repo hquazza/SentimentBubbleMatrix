@@ -3,7 +3,7 @@ import {saveChart } from "./saveChart.js";
 
 // let data;  
 
-const svgHeight = 800;
+const svgHeight = 600;
 const svgWidth = 1200;
 
 const svg = d3
