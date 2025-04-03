@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML Starter</title>
+    <meta charset="UTF-8">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    
+
+    <style>
+      .dataPoints {
+        opacity: 1; /* Full opacity */
+        transition: opacity 0.3s ease;
+      }
+
+      .dataPoints:hover {
+        opacity: 0.6;
+      }
+
+      .axis {
+        font: 14px sans-serif;
+      }
+
+      .axisLabel {
+        font: 14px sans-serif;
+        font-weight: bold;
+        font-style: italic;
+      }
+
+      .flex-container {
+        display: flex;
+        /* padding: 20px;*/
+        margin: 20px;
+      }
+
+      #navBar {
+        background-color: rgb(244, 244, 244);
+        width: 20%;
+        height: 800px;
+        font: 14px sans-serif;
+      }
+
+      #navBarTitle {
+        padding: 10px;
+        margin-top: 20px;
+        text-align: center;
+        font: 22px sans-serif;
+        font-weight: bold;
+      }
+
+      #navBarLabel {
+        padding: 30px;
+        text-align: left;
+      }
+
+      #chart {
+        background-color: #ffffff;
+        border-color: rgb(244, 244, 244);
+        border-style: solid;
+        border-width: 0.5px;
+      }
+
+      #tooltip {
+        position: absolute;
+        font: 12px sans-serif;
+        padding: 10px;
+        border: 1px solid grey;
+        border-radius: 10px;
+        background-color: white;
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+      }
+
+      .tooltipTitle {
+        font-weight: bold;
+        font: 15px;
+      }
+
+
+      .dataLabels{
+        font: 12px sans-serif;
+        padding: 10px;
+        background-color: green;
+        font-weight: bold;
+      }
+/* 
+      .tooltipStatic{
+        position: absolute;
+        font: 12px sans-serif;
+        padding: 10px; 
+        border: 1px solid grey; 
+        border-radius: 10px;
+        background-color: white; 
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+
+      } */
+
+    </style>
+  </head>
+
+  <body>
+    <div class="flex-container">
+      <div id="navBar">
+        <div id="navBarTitle">
+          <label for="fieldSizeSelection">
+            Bubble Matrix <br />
+          </label>
+        </div>
+
+        <div id="navBarLabel">
+          <label for="fieldSizeSelection">
+            Step by Step Guidance: <br />
+            <br />
+            1. Upload the data below
+            <br />
+            </label>
+            <br />
+            <input type="file" id="file-upload"/>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <button onclick="saveChart('svgID')">Save as svg</button>
+        </div>
+      </div>
+      <div id="chart"></div>
+    </div>
+    <div id="tooltip"></div>
+
+<script src="index.js" type="module"> </script> 
+
+  </body>
+</html>
